@@ -4,11 +4,8 @@ FROM ubuntu:latest
 # Update package list and install Apache
 RUN apt-get update && apt-get install apache2 -y
 
-# Set the default working directory
-WORKDIR /var/www/html
-
 # Copy your application files into the container (optional)
-COPY index.html /var/www/html/
+COPY index.html /var/www/html
 
 # Expose port 80 for HTTP traffic
 EXPOSE 8080
