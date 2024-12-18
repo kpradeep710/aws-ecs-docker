@@ -3,8 +3,7 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "demo-task"
+        TaskDefinition: "arn:aws:ecs:ap-south-1:273354629722:task-definition/test-task:1"
         LoadBalancerInfo:
-          ContainerName: "pradeep"
-          ContainerPort: 80
-
+          ContainerName: "demo"
+          ContainerPort: 8080
