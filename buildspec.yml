@@ -5,19 +5,19 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - aws --version
-      - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 273354629722.dkr.ecr.ap-south-1.amazonaws.com
-      - REPOSITORY_URI=273354629722.dkr.ecr.ap-south-1.amazonaws.com/demo-app
+      - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 970547349158.dkr.ecr.ap-south-1.amazonaws.com
+      - REPOSITORY_URI=970547349158.dkr.ecr.ap-south-1.amazonaws.com/demo-app
   build:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
       - docker build -t demo-app .
-      - docker tag demo-app:latest 273354629722.dkr.ecr.ap-south-1.amazonaws.com/demo-app:latest
+      - docker tag demo-app:latest 970547349158.dkr.ecr.ap-south-1.amazonaws.com/demo-app:latest
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker images...
-      - docker push 273354629722.dkr.ecr.ap-south-1.amazonaws.com/demo-app:latest
+      - docker push 970547349158.dkr.ecr.ap-south-1.amazonaws.com/demo-app:latest
       - echo Writing image definitions file...
       - printf '[{"name":"%s","imageUri":"%s"}]' pradeep $REPOSITORY_URI:latest > imagedefinitions.json
 
