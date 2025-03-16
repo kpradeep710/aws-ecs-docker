@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: nani-container
-          image: ubuntu:latest
+          image: ubuntu
           ports:
             - containerPort: 8080
