@@ -1,9 +1,0 @@
-version: 0.0
-Resources:
-  - TargetService:
-      Type: AWS::ECS::Service
-      Properties:
-        TaskDefinition: "arn:aws:ecs:ap-south-1:970547349158:task-definition/ecs-task:1"
-        LoadBalancerInfo:
-          ContainerName: "pradeep"
-          ContainerPort: 8080
