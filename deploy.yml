@@ -16,9 +16,9 @@ spec:
     spec:
       containers:
         - name: nani-container
-          image: ubuntu
+          image: nginx:latest
           ports:
-            - containerPort: 8080
+            - containerPort: 80
 ---
 apiVersion: v1
 kind: Service
@@ -30,5 +30,5 @@ spec:
     app: bank
   ports:
     - port: 80
-      targetPort: 8080
-      nodePort: 30710
+      targetPort: 80
+      nodePort: 31710
