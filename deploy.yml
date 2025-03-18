@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: pradeep-container
-          image: nginx:latest
+          image: nginx
           ports:
             - containerPort: 80
 ---
