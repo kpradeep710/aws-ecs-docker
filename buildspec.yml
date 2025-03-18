@@ -23,7 +23,7 @@ phases:
       
       - echo "Updating Kubernetes deployment..."
       - aws eks update-kubeconfig --region ap-south-1 --name nani-cluster
-      - sed -i "s|ubuntu|970547349158.dkr.ecr.ap-south-1.amazonaws.com/nani-repo:latest|g" deploy.yml
+      - sed -i "s|nginx|970547349158.dkr.ecr.ap-south-1.amazonaws.com/nani-repo:latest|g" deploy.yml
       - kubectl apply -f deploy.yml --validate=false
       - echo "Deployment successful!"
 
